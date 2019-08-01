@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./ShareEvent.css";
 
 import appleIcon from "../../assets/images/apple.svg";
@@ -7,8 +7,9 @@ import outlookIcon from "../../assets/images/outlook.svg";
 import yahooIcon from "../../assets/images/yahoo.svg";
 
 const ShareEvent = ({ event }) => {
-  let options = React.createRef();
+  let options = useRef(null);
   let [isExpanded, setIsExpanded] = useState(false);
+  let [height, setHeight] = useState(0);
 
   const formatDate = date => date.toISOString().replace(/-|:|\.\d+/g, "");
 
@@ -67,13 +68,8 @@ const ShareEvent = ({ event }) => {
   };
 
   const toggleOptions = () => {
-    // btnToggle.addEventListener("click", function() {
-    //   let expanded = options.getAttribute("aria-expanded");
-    //   expanded == "true"
-    //     ? options.setAttribute("aria-expanded", false)
-    //     : options.setAttribute("aria-expanded", true);
-    // });
-    console.log();
+    isExpanded ? setIsExpanded(false) : setIsExpanded(true);
+    isExpanded ? setHeight(0) : setHeight(215);
   };
 
   return (
@@ -81,21 +77,53 @@ const ShareEvent = ({ event }) => {
       <button onClick={toggleOptions} data-share-event="btn-toggle">
         Share Event
       </button>
-      <ul data-share-event="options" ref={options} aria-expanded="false">
-        <a href={google(event)}>
-          <img src={googleIcon} alt="Google logo" class="calendar-logo" />
+      <ul
+        data-share-event="options"
+        ref={options}
+        aria-expanded={isExpanded}
+        style={{ height }}
+      >
+        <a href={google(event)} rel="noopener noreferrer" target="_blank">
+          <li>
+            <img src={googleIcon} alt="Google logo" className="calendar-logo" />
+            Google
+          </li>
         </a>
         <a href={ics(event)}>
-          <img src={outlookIcon} alt="Outlook logo" class="calendar-logo" />
+          <li>
+            <img
+              src={outlookIcon}
+              alt="Outlook logo"
+              className="calendar-logo"
+            />
+            Outlook
+          </li>
         </a>
-        <a href={outlookOnline(event)}>
-          <img src={outlookIcon} alt="Outlook logo" class="calendar-logo" />
+        <a
+          href={outlookOnline(event)}
+          rel="noopener noreferrer"
+          target="_blank"
+        >
+          <li>
+            <img
+              src={outlookIcon}
+              alt="Outlook logo"
+              className="calendar-logo"
+            />
+            Outlook Online
+          </li>
         </a>
         <a href={ics(event)}>
-          <img src={appleIcon} alt="Apple logo" class="calendar-logo" />
+          <li>
+            <img src={appleIcon} alt="Apple logo" className="calendar-logo" />
+            iCalendar
+          </li>
         </a>
-        <a href={yahoo(event)}>
-          <img src={yahooIcon} alt="Yahoo logo" class="calendar-logo" />
+        <a href={yahoo(event)} rel="noopener noreferrer" target="_blank">
+          <li>
+            <img src={yahooIcon} alt="Yahoo logo" className="calendar-logo" />
+            Yahoo
+          </li>
         </a>
       </ul>
     </article>
