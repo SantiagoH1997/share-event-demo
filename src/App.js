@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 
 import ShareEvent from "./components/ShareEvent/ShareEvent";
+import EventForm from "./components/EventForm/EventForm";
 
 function App() {
   let [event, setEvent] = useState({
@@ -16,6 +17,7 @@ function App() {
     <div className="App">
       <header className="App-header">Share Event</header>
       <ShareEvent event={event} />
+      <EventForm />
     </div>
   );
 }

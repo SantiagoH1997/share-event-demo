@@ -1,0 +1,65 @@
+.EventForm {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  font-size: 1rem;
+  background-color: #f6f8fa;
+  width: 450px;
+  min-width: 450px;
+  max-width: 90%;
+  padding: 1.5rem 1rem;
+  border-radius: 5px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #032f62;
+}
+.label-input {
+  padding-left: 1rem;
+}
+input {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  color: #032f62;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  font-size: 1rem;
+}
+
+.key {
+  color: #24292e;
+}
+.white {
+  color: #fff;
+}
+.date-span {
+  color: #6f42c1;
+}
+.red-span {
+  color: #d73a49;
+}
+.blue-span {
+  color: #005cc5;
+}
+
+.btn-form {
+  background-color: transparent;
+  border: 1px solid #333;
+  border-radius: 5px;
+  width: 150px;
+  padding: 0.5rem;
+  margin: 0 auto;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.3s;
+  font-family: "Nunito", sans-serif;
+}
+.btn-form:hover {
+  background-color: #d3d3d3;
+  transform: scale(1.05);
+}
