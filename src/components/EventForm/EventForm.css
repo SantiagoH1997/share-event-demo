@@ -58,6 +58,7 @@ input {
   outline: none;
   transition: all 0.3s;
   font-family: "Nunito", sans-serif;
+  font-size: 0.9rem;
 }
 .btn-form:hover {
   background-color: #d3d3d3;

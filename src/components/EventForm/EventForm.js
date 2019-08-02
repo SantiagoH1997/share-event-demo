@@ -1,6 +1,8 @@
 import React from "react";
 import "./EventForm.css";
 
+import Input from "../Input/Input";
+
 class EventForm extends React.Component {
   state = {
     title: "",
@@ -9,9 +11,10 @@ class EventForm extends React.Component {
     end: "",
     location: ""
   };
+
   handleChange = e => {
     let field = e.target.id;
-    this.setState({ [field]: `${e.target.value}` });
+    this.setState({ [field]: e.target.value });
   };
   render() {
     return (
@@ -26,27 +29,27 @@ class EventForm extends React.Component {
             <label htmlFor="title">
               <span className="key">title:</span>{" "}
             </label>
-            <input
-              type="text"
-              id="title"
+            "
+            <Input
+              inputField="title"
               placeholder="Test event"
               onChange={e => this.handleChange(e)}
               value={`${this.state.title}`}
             />
-            <span className="white">,</span>
+            "<span className="white">,</span>
           </div>
           <div className="label-input">
             <label htmlFor="description">
               <span className="key">description:</span>
             </label>{" "}
-            <input
-              type="text"
-              id="description"
+            "
+            <Input
+              inputField="description"
               placeholder="This is a random test event"
               onChange={e => this.handleChange(e)}
               value={this.state.description}
             />
-            <span className="white">,</span>
+            "<span className="white">,</span>
           </div>
           <div className="label-input">
             <label htmlFor="start">
@@ -54,9 +57,8 @@ class EventForm extends React.Component {
               <span className="red-span">new</span>{" "}
               <span className="date-span">Date</span>('
             </label>
-            <input
-              type="text"
-              id="start"
+            <Input
+              inputField="start"
               placeholder="March 9, 2020 15:00"
               onChange={e => this.handleChange(e)}
               value={this.state.start}
@@ -69,9 +71,8 @@ class EventForm extends React.Component {
               <span className="red-span">new</span>{" "}
               <span className="date-span">Date</span>('
             </label>
-            <input
-              type="text"
-              id="end"
+            <Input
+              inputField="end"
               placeholder="March 9, 2020 17:00"
               onChange={e => this.handleChange(e)}
               value={this.state.end}
@@ -82,13 +83,14 @@ class EventForm extends React.Component {
             <label htmlFor="location">
               <span className="key">location:</span>{" "}
             </label>
-            <input
-              type="text"
-              id="location"
+            "
+            <Input
+              inputField="location"
               placeholder="Random street 947"
               onChange={e => this.handleChange(e)}
               value={this.state.location}
             />
+            "
           </div>
           {"}"}
           <button className="btn-form">Generate!</button>
