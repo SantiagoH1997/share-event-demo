@@ -16,6 +16,18 @@ class EventForm extends React.Component {
     let field = e.target.id;
     this.setState({ [field]: e.target.value });
   };
+
+  handleSubmit = e => {
+    e.preventDefault();
+    const event = {
+      title: this.state.title.trim(),
+      description: this.state.description.trim(),
+      start: new Date(this.state.start.trim()),
+      end: new Date(this.state.end.trim()),
+      location: this.state.location.trim()
+    };
+    this.props.onSubmit(event);
+  };
   render() {
     return (
       <section className="EventForm">
@@ -93,7 +105,20 @@ class EventForm extends React.Component {
             "
           </div>
           {"}"}
-          <button className="btn-form">Generate!</button>
+          <button className="btn-form" onClick={e => this.handleSubmit(e)}>
+            Generate!
+          </button>
+          {this.props.message ? (
+            <p
+              className={
+                this.props.message === "Generated!"
+                  ? "message generated"
+                  : "message"
+              }
+            >
+              {this.props.message}
+            </p>
+          ) : null}
         </form>
       </section>
     );
