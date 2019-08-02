@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/share-event-demo/static/css/main.64002cdf.chunk.css",
+    "main.js": "/share-event-demo/static/js/main.1366605b.chunk.js",
+    "main.js.map": "/share-event-demo/static/js/main.1366605b.chunk.js.map",
+    "runtime~main.js": "/share-event-demo/static/js/runtime~main.bd33bcab.js",
+    "runtime~main.js.map": "/share-event-demo/static/js/runtime~main.bd33bcab.js.map",
+    "static/js/2.13179017.chunk.js": "/share-event-demo/static/js/2.13179017.chunk.js",
+    "static/js/2.13179017.chunk.js.map": "/share-event-demo/static/js/2.13179017.chunk.js.map",
+    "index.html": "/share-event-demo/index.html",
+    "precache-manifest.1029d72bff927937d58e110b150dafe6.js": "/share-event-demo/precache-manifest.1029d72bff927937d58e110b150dafe6.js",
+    "service-worker.js": "/share-event-demo/service-worker.js",
+    "static/css/main.64002cdf.chunk.css.map": "/share-event-demo/static/css/main.64002cdf.chunk.css.map",
+    "static/media/apple.svg": "/share-event-demo/static/media/apple.7f36828d.svg",
+    "static/media/google.svg": "/share-event-demo/static/media/google.686f8efa.svg",
+    "static/media/outlook.svg": "/share-event-demo/static/media/outlook.a1293d2c.svg",
+    "static/media/yahoo.svg": "/share-event-demo/static/media/yahoo.d7fcfd93.svg"
+  }
+}
