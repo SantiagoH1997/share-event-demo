@@ -14,8 +14,8 @@ const Input = props => {
         style={{
           width:
             props.value.length === 0
-              ? props.placeholder.length * 9.2 + 8 + "px"
-              : props.value.length * 9.2 + 7 + "px",
+              ? props.placeholder.length + "ch"
+              : props.value.length + "ch",
           maxWidth: 210
         }}
         autoComplete="off"
